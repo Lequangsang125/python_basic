@@ -38,9 +38,27 @@ print(y)
 print(z)
 
 # Giải nén trong python
-# Biến đầu ra 
 x = 'l'
 y = 'q'
 z = 's'
 print(x,y,z)
 print(x + y + z)
+
+print('hello', 'world')
+
+# biến toàn cục là các biến tạo bên ngoài hàm
+# sử dụng đc cả bên trong và ngoài hàm
+x = 'lesang'
+def myFunc():
+    x = 'Aki'
+    print("Toi la" + x)
+myFunc()
+print("Toi la" + x)
+
+# muốn tạo biến toàn cục trong hàm thì dùng global
+def myFunc1():
+    global x 
+    x = 'lesang'
+    print('taola ' + x)
+myFunc1()
+print('taolas ' + x)
